@@ -26,26 +26,25 @@
       margin-right: 20px;
     }
     header.page-header {
-      background: url('https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&h=750') center center/cover no-repeat;
+      background: linear-gradient(to right, #001f3f, #0074D9);
       height: 50vh;
-      position: relative;
       color: #fff;
       text-align: center;
-    }
-    header.page-header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-    }
-    header.page-header .content {
-      position: relative;
-      z-index: 2;
-      top: 50%;
-      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
     section {
       padding: 80px 20px;
+    }
+    .service-block {
+      margin-bottom: 50px;
+    }
+    .service-block img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
     }
     footer {
       background: #001f3f;
@@ -63,22 +62,6 @@
       width: 80px;
       height: auto;
       margin-bottom: 0;
-    }
-    .service-box {
-      background: #f9f9f9;
-      padding: 30px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    .service-box img {
-      height: 80px;
-      margin-bottom: 20px;
-    }
-    .service-box h3 {
-      font-weight: 600;
-      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -112,43 +95,47 @@
 
 <!-- Page Header -->
 <header class="page-header">
-  <div class="content">
-    <h1 data-aos="fade-up">Our Services</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Solutions built for growth and profit.</p>
-  </div>
+  <h1 data-aos="fade-up">Our Services</h1>
+  <p data-aos="fade-up" data-aos-delay="200">Innovative solutions for growth and success.</p>
 </header>
 
-<!-- Services -->
-<section data-aos="fade-up">
+<!-- Services Section -->
+<section>
   <div class="container">
-    <div class="row">
+    <div class="service-block row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
-        <div class="service-box" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Digital Marketing">
-          <h3>Digital Marketing Strategy</h3>
-          <p>We craft tailored marketing plans for contractors and remodelers, ensuring you attract high-value clients and grow revenue.</p>
-        </div>
+        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Marketing strategy">
       </div>
       <div class="col-md-6">
-        <div class="service-box" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Website Design">
-          <h3>Website Design & Redesign</h3>
-          <p>Modern, mobile-friendly websites built to convert visitors into leads and showcase your craftsmanship beautifully.</p>
-        </div>
+        <h2>Digital Marketing Strategy</h2>
+        <p>Blueprint Strategy Execution Corporation designs comprehensive marketing strategies to help contractors and remodelers expand their online reach, generate consistent leads, and close higher-value projects.</p>
+      </div>
+    </div>
+    <div class="service-block row align-items-center flex-row-reverse" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-6">
+        <img src="https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Web Design">
       </div>
       <div class="col-md-6">
-        <div class="service-box" data-aos="fade-up" data-aos-delay="300">
-          <img src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Reputation Management">
-          <h3>Reputation Management</h3>
-          <p>We monitor, protect, and enhance your online reputation, helping you earn more trust and Google reviews that drive new customers.</p>
-        </div>
+        <h2>Website Design & Redesign</h2>
+        <p>We create high-converting websites that showcase your expertise, build trust with clients, and drive new business for your contracting company.</p>
+      </div>
+    </div>
+    <div class="service-block row align-items-center" data-aos="fade-up" data-aos-delay="400">
+      <div class="col-md-6">
+        <img src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Reputation Management">
       </div>
       <div class="col-md-6">
-        <div class="service-box" data-aos="fade-up" data-aos-delay="400">
-          <img src="https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Contractor Systems">
-          <h3>Contractor Marketing Systems</h3>
-          <p>From SEO to local ads to automated follow-up systems, we build marketing machines designed to keep your calendar full year-round.</p>
-        </div>
+        <h2>Reputation Management</h2>
+        <p>Protect and grow your online reputation with proactive review strategies and reputation monitoring, ensuring your business stands out from competitors.</p>
+      </div>
+    </div>
+    <div class="service-block row align-items-center flex-row-reverse" data-aos="fade-up" data-aos-delay="600">
+      <div class="col-md-6">
+        <img src="https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Contractor Marketing Systems">
+      </div>
+      <div class="col-md-6">
+        <h2>Contractor Marketing Systems</h2>
+        <p>We build automated marketing systems that keep your pipeline full, allowing you to focus on what you do best—running projects and growing your business.</p>
       </div>
     </div>
   </div>
