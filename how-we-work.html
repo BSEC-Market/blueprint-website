@@ -5,57 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How We Work - Blueprint Strategy Execution Corporation</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #fff;
       color: #333;
+      background: #fff;
     }
     .navbar {
-      background: #0d6efd;
-      justify-content: center;
+      background: transparent;
+      transition: background 0.4s ease;
     }
-    .navbar-brand, .navbar-nav .nav-link {
+    .navbar.scrolled {
+      background: rgba(0, 31, 63, 0.85);
+    }
+    .nav-link {
       color: #fff;
+      font-weight: 500;
+      margin-right: 20px;
     }
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                  url('https://images.pexels.com/photos/5668870/pexels-photo-5668870.jpeg?auto=compress&cs=tinysrgb&h=750') center/cover no-repeat;
+    header.hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
       color: #fff;
       text-align: center;
-      padding: 120px 20px;
     }
-    .icon {
-      font-size: 3rem;
-      color: #0d6efd;
-      margin-bottom: 15px;
+    header.hero video {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    header.hero .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+    header.hero .content {
+      position: relative;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    header.hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    header.hero p {
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-top: 15px;
     }
     section {
       padding: 80px 20px;
     }
+    .section-light {
+      background: #f9f9f9;
+    }
     .section-dark {
-      background: #0d6efd;
+      background: #001f3f;
       color: #fff;
     }
     footer {
-      background: #0d6efd;
+      background: #001f3f;
       color: #fff;
       text-align: center;
       padding: 20px;
+    }
+    .btn-primary {
+      background-color: #7dbff5;
+      border: none;
+      font-weight: 600;
+      padding: 12px 30px;
+    }
+    svg.logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .icon {
+      font-size: 3rem;
+      color: #d4af37;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container justify-content-center">
-    <a class="navbar-brand mx-auto" href="index.html">Blueprint Strategy Execution</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" stroke="#001f3f" stroke-width="8" fill="none"/>
+        <polygon points="100,20 110,100 100,180 90,100" fill="#d4af37"/>
+        <path d="M 40 140 Q 100 180 160 140" stroke="#7dbff5" stroke-width="5" fill="none"/>
+      </svg>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -67,49 +121,58 @@
   </div>
 </nav>
 
-<section class="hero">
-  <div class="container">
-    <h1>Our Proven Process</h1>
-    <p>From blueprint to execution, we create a path for contractors to grow and thrive.</p>
+<!-- Hero -->
+<header class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="https://player.vimeo.com/external/469691406.sd.mp4?s=c403ca80b77b0c878d2c12713ebc1b29a1dfb3d7&profile_id=165" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+  <div class="content">
+    <h1 data-aos="fade-up">Our Proven Process</h1>
+    <p data-aos="fade-up" data-aos-delay="200">From blueprint to execution, we deliver results contractors can count on.</p>
   </div>
-</section>
+</header>
 
-<section class="text-center">
-  <div class="container">
-    <h2 class="mb-5">How We Work</h2>
-    <div class="row g-5">
-      <div class="col-md-4">
+<!-- Process Section -->
+<section class="section-light" data-aos="fade-up">
+  <div class="container text-center">
+    <h2>How We Work</h2>
+    <p class="lead mt-3">
+      We don’t just sell marketing services — we build a strategic partnership designed to help contractors grow revenue and reputation.
+    </p>
+    <div class="row mt-5">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
         <i class="bi bi-lightbulb icon"></i>
         <h4>Discovery</h4>
-        <p>We start by understanding your business, your market, and your goals. We analyze your current online presence and identify opportunities for rapid improvement.</p>
+        <p>We start with a deep dive into your business goals, market challenges, and growth potential. Every blueprint is unique — and yours should be, too.</p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <i class="bi bi-clipboard-check icon"></i>
-        <h4>The Blueprint</h4>
-        <p>We craft a custom strategy covering website design, SEO, reputation management, and lead generation. Everything tailored specifically for contractors in your market.</p>
+        <h4>Blueprint</h4>
+        <p>Our team crafts a custom strategy blending modern web design, local SEO, reputation building, and lead generation to help you dominate your niche.</p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
         <i class="bi bi-rocket-takeoff icon"></i>
         <h4>Execution</h4>
-        <p>We execute every piece of the plan — from launching new sites to running ads and collecting 5-star reviews — while you focus on your projects and clients.</p>
+        <p>We execute every piece of the plan with precision. From launching new websites to running ads and monitoring results, we’re in the trenches with you.</p>
       </div>
     </div>
-    <div class="text-center mt-5">
-      <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&h=500" class="img-fluid rounded" alt="How We Work">
-    </div>
+    <a href="contact.html" class="btn btn-primary mt-5">Start Your Blueprint</a>
   </div>
 </section>
 
-<section class="section-dark text-center">
-  <div class="container">
-    <h2>Let's Build Your Blueprint Together</h2>
-    <p class="lead">We’ve guided contractors nationwide to lasting growth and higher profits. Let’s talk about your blueprint for success.</p>
-    <a href="contact.html" class="btn btn-light mt-3">Schedule a Call</a>
-  </div>
-</section>
-
-<footer>&copy; 2025 Blueprint Strategy Execution Corporation. All Rights Reserved.</footer>
+<footer>
+  &copy; 2025 Blueprint Strategy Execution Corporation. All Rights Reserved.
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  window.addEventListener('scroll', function() {
+    document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
 </body>
 </html>
