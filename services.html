@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Blueprint Strategy Execution Corporation</title>
+  <title>Services - Blueprint Strategy Execution Corporation</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -25,26 +26,49 @@
       font-weight: 500;
       margin-right: 20px;
     }
-    header.page-header {
-      background: linear-gradient(to right, #001f3f, #0074D9);
-      height: 50vh;
+    header.hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
       color: #fff;
       text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+    }
+    header.hero video {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    header.hero .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+    header.hero .content {
+      position: relative;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    header.hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    header.hero p {
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-top: 15px;
     }
     section {
       padding: 80px 20px;
     }
-    .service-block {
-      margin-bottom: 50px;
+    .section-light {
+      background: #f9f9f9;
     }
-    .service-block img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 20px;
+    .section-dark {
+      background: #001f3f;
+      color: #fff;
     }
     footer {
       background: #001f3f;
@@ -59,9 +83,21 @@
       padding: 12px 30px;
     }
     svg.logo {
-      width: 80px;
+      width: 100px;
       height: auto;
-      margin-bottom: 0;
+      margin-bottom: 20px;
+    }
+    .service-icon {
+      font-size: 3rem;
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+    .service-img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      height: 200px;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -93,51 +129,66 @@
   </div>
 </nav>
 
-<!-- Page Header -->
-<header class="page-header">
-  <h1 data-aos="fade-up">Our Services</h1>
-  <p data-aos="fade-up" data-aos-delay="200">Innovative solutions for growth and success.</p>
+<!-- Hero -->
+<header class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="https://player.vimeo.com/external/469691178.sd.mp4?s=64d3ac126cd3e9abf57aa4d4d0fbb3b9f86eeed4&profile_id=165" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+  <div class="content">
+    <h1 data-aos="fade-up">Our Services</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Digital strategies designed for contractors ready to dominate their markets.</p>
+  </div>
 </header>
 
 <!-- Services Section -->
-<section>
-  <div class="container">
-    <div class="service-block row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
-        <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Marketing strategy">
+<section class="section-light" data-aos="fade-up">
+  <div class="container text-center">
+    <h2>Services Built for the Contracting Industry</h2>
+    <p class="lead mt-3">
+      We’ve spent over a decade perfecting services specifically for contractors and remodelers. Here’s how we help you win.
+    </p>
+    <div class="row mt-5">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Digital Marketing" class="service-img">
+        <i class="bi bi-laptop service-icon"></i>
+        <h4>Website Design</h4>
+        <p>Modern, mobile-friendly websites that showcase your craftsmanship and convert visitors into leads 24/7.</p>
       </div>
-      <div class="col-md-6">
-        <h2>Digital Marketing Strategy</h2>
-        <p>Blueprint Strategy Execution Corporation designs comprehensive marketing strategies to help contractors and remodelers expand their online reach, generate consistent leads, and close higher-value projects. We analyze your market, competitors, and target customers to create custom marketing plans that drive measurable results.</p>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&h=750" alt="SEO Strategy" class="service-img">
+        <i class="bi bi-geo-alt service-icon"></i>
+        <h4>Local SEO</h4>
+        <p>Rank at the top of Google for searches like “remodeler near me.” Own your market with precision local SEO strategies.</p>
       </div>
-    </div>
-    <div class="service-block row align-items-center flex-row-reverse" data-aos="fade-up" data-aos-delay="200">
-      <div class="col-md-6">
-        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Web Design">
-      </div>
-      <div class="col-md-6">
-        <h2>Website Design & Redesign</h2>
-        <p>We create modern, high-converting websites that showcase your craftsmanship and expertise. Our websites are mobile-friendly, visually engaging, and strategically designed to turn visitors into customers. Whether starting fresh or upgrading an outdated site, we ensure your online presence works as hard as you do.</p>
-      </div>
-    </div>
-    <div class="service-block row align-items-center" data-aos="fade-up" data-aos-delay="400">
-      <div class="col-md-6">
-        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Reputation Management">
-      </div>
-      <div class="col-md-6">
-        <h2>Reputation Management</h2>
-        <p>Protect and grow your online reputation with proactive review strategies and reputation monitoring. We help contractors secure more positive reviews, manage customer feedback, and ensure your business stands out on Google, social media, and review platforms — driving more trust and higher conversions.</p>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Reputation Management" class="service-img">
+        <i class="bi bi-star service-icon"></i>
+        <h4>Reputation Management</h4>
+        <p>Turn satisfied clients into 5-star ambassadors. We help you earn more positive reviews and manage your brand online.</p>
       </div>
     </div>
-    <div class="service-block row align-items-center flex-row-reverse" data-aos="fade-up" data-aos-delay="600">
-      <div class="col-md-6">
-        <img src="https://images.pexels.com/photos/3277808/pexels-photo-3277808.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Contractor Marketing Systems">
+    <div class="row mt-5">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <img src="https://images.pexels.com/photos/3277808/pexels-photo-3277808.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Paid Advertising" class="service-img">
+        <i class="bi bi-bullseye service-icon"></i>
+        <h4>Paid Advertising</h4>
+        <p>Fill your schedule fast with expertly managed Google and social ads targeting homeowners ready to hire.</p>
       </div>
-      <div class="col-md-6">
-        <h2>Contractor Marketing Systems</h2>
-        <p>We build fully automated marketing systems that keep your pipeline full. From SEO and local ads to follow-up automation and reporting dashboards, we ensure your business runs efficiently while you focus on your projects. Grow smarter with proven marketing infrastructure tailored to contractors.</p>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+        <img src="https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Photo and Video" class="service-img">
+        <i class="bi bi-camera-video service-icon"></i>
+        <h4>Photo & Video</h4>
+        <p>Capture the beauty of your work. From before-and-after photos to stunning video reels for your website and ads.</p>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+        <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&h=750" alt="Lead Tracking" class="service-img">
+        <i class="bi bi-bar-chart service-icon"></i>
+        <h4>Lead Tracking</h4>
+        <p>Know exactly which marketing dollars produce revenue. Our reporting keeps your growth transparent and measurable.</p>
       </div>
     </div>
+    <a href="contact.html" class="btn btn-primary mt-5">Let's Talk About Your Project</a>
   </div>
 </section>
 
@@ -149,6 +200,7 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
+
   window.addEventListener('scroll', function() {
     document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
   });
