@@ -5,18 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services - Blueprint Strategy Execution Corporation</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+    .navbar {
+      justify-content: center;
+      background: #0d6efd;
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&h=750') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    section {
+      padding: 80px 0;
+    }
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+    .section-dark {
+      background: #0d6efd;
+      color: #fff;
+    }
+    footer {
+      background: #0d6efd;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .btn-primary {
+      background-color: #0d6efd;
+      border: none;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Blueprint Strategy Execution Corporation</a>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container justify-content-center">
+      <a class="navbar-brand mx-auto" href="index.html">Blueprint Strategy Execution</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="how-we-work.html">How We Work</a></li>
@@ -26,40 +72,81 @@
     </div>
   </nav>
 
-  <section class="py-5">
+  <!-- Hero -->
+  <section class="hero">
     <div class="container">
-      <h2 class="text-center mb-4">Our Services</h2>
-      <div class="row g-4">
+      <h1>Our Services</h1>
+      <p>Digital marketing solutions built exclusively for contractors ready to scale.</p>
+    </div>
+  </section>
+
+  <!-- Service Icons -->
+  <section>
+    <div class="container text-center">
+      <h2 class="mb-5">What We Do</h2>
+      <div class="row g-5">
         <div class="col-md-4">
-          <div class="card">
-            <img src="https://images.pexels.com/photos/210588/pexels-photo-210588.jpeg?auto=compress&cs=tinysrgb&h=200" class="card-img-top" alt="Website Design">
-            <div class="card-body">
-              <h5 class="card-title">Website Design</h5>
-              <p class="card-text">Modern, mobile-friendly websites that convert visitors into clients.</p>
-            </div>
-          </div>
+          <i class="bi bi-laptop icon"></i>
+          <h4>Website Design & Redesign</h4>
+          <p>Custom websites built to impress homeowners, showcase your craftsmanship, and generate high-value leads. Mobile-friendly, fast, and designed for contractors.</p>
         </div>
         <div class="col-md-4">
-          <div class="card">
-            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&h=200" class="card-img-top" alt="SEO">
-            <div class="card-body">
-              <h5 class="card-title">Local SEO</h5>
-              <p class="card-text">Rank higher on Google and dominate local searches for remodeling services.</p>
-            </div>
-          </div>
+          <i class="bi bi-geo-alt icon"></i>
+          <h4>Local SEO</h4>
+          <p>Rank for searches like “remodeler near me” and dominate local markets. We optimize your website and Google profiles for maximum visibility.</p>
         </div>
         <div class="col-md-4">
-          <div class="card">
-            <img src="https://images.pexels.com/photos/3760523/pexels-photo-3760523.jpeg?auto=compress&cs=tinysrgb&h=200" class="card-img-top" alt="Reputation Management">
-            <div class="card-body">
-              <h5 class="card-title">Reputation Management</h5>
-              <p class="card-text">More 5-star reviews and a trustworthy online reputation that drives leads.</p>
-            </div>
-          </div>
+          <i class="bi bi-star icon"></i>
+          <h4>Reputation Management</h4>
+          <p>Build trust with homeowners and commercial clients through consistent 5-star reviews. We monitor, respond, and help generate more positive feedback.</p>
+        </div>
+      </div>
+      <div class="row g-5 mt-5">
+        <div class="col-md-4">
+          <i class="bi bi-bullseye icon"></i>
+          <h4>Paid Advertising</h4>
+          <p>Immediate leads through expertly managed Google and social ads. We track every dollar and prove your ROI.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-camera-video icon"></i>
+          <h4>Photo & Video Marketing</h4>
+          <p>Showcase your projects with stunning visuals. From before-and-after photos to branded video reels that help you stand out.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-bar-chart icon"></i>
+          <h4>Lead Tracking & Reporting</h4>
+          <p>Know exactly where your leads come from and how much they cost. Transparent reports show your true marketing performance.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Image + Video Section -->
+  <section class="section-dark">
+    <div class="container">
+      <h2 class="text-center mb-5">See Us In Action</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="lead">
+            Contractors nationwide trust Blueprint Strategy Execution Corporation because we bring real results, not empty promises. We understand your industry, your clients, and the unique challenges you face. Let’s show you what modern marketing looks like for contractors ready to scale.
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center">
+    <div class="container">
+      <h2>Ready to Build Your Blueprint?</h2>
+      <p class="lead">We’ve helped contractors scale from small shops to multi-million dollar operations. Let’s create your digital foundation for success.</p>
+      <a href="contact.html" class="btn btn-primary mt-3">Start Your Blueprint</a>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 Blueprint Strategy Execution Corporation. All Rights Reserved.</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
