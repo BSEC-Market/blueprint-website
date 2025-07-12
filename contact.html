@@ -8,6 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       color: #333;
@@ -27,7 +30,7 @@
     }
     header.hero {
       position: relative;
-      height: 100vh;
+      height: 60vh;
       overflow: hidden;
       color: #fff;
       text-align: center;
@@ -51,7 +54,7 @@
       transform: translateY(-50%);
     }
     header.hero h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       font-weight: 700;
     }
     header.hero p {
@@ -78,9 +81,9 @@
       padding: 12px 30px;
     }
     svg.logo {
-      width: 100px;
+      width: 80px;
       height: auto;
-      margin-bottom: 20px;
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -89,12 +92,13 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
       <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <circle cx="100" cy="100" r="80" stroke="#001f3f" stroke-width="8" fill="none"/>
         <polygon points="100,20 110,100 100,180 90,100" fill="#d4af37"/>
         <path d="M 40 140 Q 100 180 160 140" stroke="#7dbff5" stroke-width="5" fill="none"/>
       </svg>
+      <span class="ms-2 text-white fw-bold">BSEC</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -114,27 +118,23 @@
 <!-- Hero -->
 <header class="hero">
   <video autoplay muted loop playsinline>
-    <source src="https://player.vimeo.com/external/469691275.sd.mp4?s=f05767fc9ecb5e1a38d7a36dc1c8cf94dd248f9f&profile_id=165" type="video/mp4">
+    <source src="https://player.vimeo.com/external/469691178.sd.mp4?s=64d3ac126cd3e9abf57aa4d4d0fbb3b9f86eeed4&profile_id=165" type="video/mp4">
   </video>
   <div class="overlay"></div>
   <div class="content">
-    <h1 data-aos="fade-up">Get In Touch</h1>
-    <p data-aos="fade-up" data-aos-delay="200">From blueprint to results — let’s start your journey.</p>
+    <h1 data-aos="fade-up">Contact Us</h1>
+    <p data-aos="fade-up" data-aos-delay="200">We’re ready to help you transform your business. Let’s talk strategy.</p>
   </div>
 </header>
 
-<!-- Contact Info -->
+<!-- Calendly Embed Section -->
 <section class="section-light" data-aos="fade-up">
-  <div class="container text-center">
-    <h2>Contact Information</h2>
-    <p class="lead mt-3">
-      We partner with contractors across the country to build modern digital foundations and drive measurable growth.
-    </p>
-    <p class="mt-4"><strong>Email:</strong> <a href="mailto:info@blueprintexecution.com">info@blueprintexecution.com</a></p>
-    <p><strong>Phone:</strong> (555) 555-5555</p>
-    <a href="https://calendly.com" target="_blank" class="btn btn-primary mt-4">Schedule a Consultation</a>
+  <div class="container">
+    <h2 class="text-center mb-4">Schedule Your Strategy Call</h2>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/arianawallace817/30min" style="min-width:320px;height:630px;"></div>
   </div>
 </section>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 
 <footer>
   &copy; 2025 Blueprint Strategy Execution Corporation. All Rights Reserved.
@@ -144,7 +144,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
-
   window.addEventListener('scroll', function() {
     document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
   });
