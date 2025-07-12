@@ -25,18 +25,19 @@
       font-weight: 500;
       margin-right: 20px;
     }
-    header.hero {
-      position: relative;
+    header.hero.parallax {
+      background-image: url('https://images.pexels.com/photos/5668870/pexels-photo-5668870.jpeg?auto=compress&cs=tinysrgb&h=750');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
       height: 100vh;
-      overflow: hidden;
-      color: #fff;
+      position: relative;
+      animation: kenburns 30s infinite alternate;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-    }
-    header.hero video {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: -1;
+      color: #fff;
     }
     header.hero .overlay {
       position: absolute;
@@ -47,8 +48,10 @@
     header.hero .content {
       position: relative;
       z-index: 2;
-      top: 50%;
-      transform: translateY(-50%);
+    }
+    @keyframes kenburns {
+      0% { background-size: 100%; }
+      100% { background-size: 110%; }
     }
     header.hero h1 {
       font-size: 3.5rem;
@@ -140,10 +143,7 @@
 </nav>
 
 <!-- Hero -->
-<header class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="https://player.vimeo.com/external/469691304.sd.mp4?s=07a10820b3e066d25b88b8a3b7fa72b1785c8763&profile_id=165" type="video/mp4">
-  </video>
+<header class="hero parallax">
   <div class="overlay"></div>
   <div class="content">
     <h1 data-aos="fade-up">Our Packages</h1>
@@ -204,3 +204,22 @@
           <a href="contact.html" class="btn btn-primary mt-3">Get Started</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Blueprint Strategy Execution Corporation. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  window.addEventListener('scroll', function() {
+    document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+</body>
+</html>
