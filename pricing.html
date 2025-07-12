@@ -113,6 +113,15 @@
     .package ul li {
       margin-bottom: 10px;
     }
+    .note {
+      font-size: 0.95rem;
+      color: #666;
+      margin-top: 30px;
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 <body>
@@ -120,12 +129,13 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
       <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <circle cx="100" cy="100" r="80" stroke="#001f3f" stroke-width="8" fill="none"/>
         <polygon points="100,20 110,100 100,180 90,100" fill="#d4af37"/>
         <path d="M 40 140 Q 100 180 160 140" stroke="#7dbff5" stroke-width="5" fill="none"/>
       </svg>
+      <span class="ms-2 text-white fw-bold">BSEC</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -159,7 +169,7 @@
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="package">
           <h3>Blueprint Core</h3>
-          <div class="price">$2,500/mo</div>
+          <div class="price">$3,500/mo</div>
           <ul>
             <li>✅ Modern website (5-7 pages)</li>
             <li>✅ Mobile-friendly</li>
@@ -174,7 +184,7 @@
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="package">
           <h3>Blueprint Growth</h3>
-          <div class="price">$4,500/mo</div>
+          <div class="price">$5,500/mo</div>
           <ul>
             <li>✅ Everything in Core</li>
             <li>✅ Advanced SEO & citations</li>
@@ -190,7 +200,7 @@
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
         <div class="package">
           <h3>Blueprint Domination</h3>
-          <div class="price">$7,500/mo</div>
+          <div class="price">$8,500/mo</div>
           <ul>
             <li>✅ Everything in Growth</li>
             <li>✅ Google Ads management</li>
@@ -205,6 +215,9 @@
         </div>
       </div>
     </div>
+    <p class="note mt-5">
+      <strong>Note:</strong> Any advertising spend (Google Ads, social media ad budgets, etc.) is an additional cost and will be determined based on the daily budget you wish to allocate.
+    </p>
   </div>
 </section>
 
@@ -216,7 +229,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
-
   window.addEventListener('scroll', function() {
     document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
   });
