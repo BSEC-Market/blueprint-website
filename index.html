@@ -5,109 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blueprint Strategy Execution Corporation</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
     .hero {
-      background: url('https://images.unsplash.com/photo-1603282969980-3b5c95dc1d59?crop=entropy&cs=tinysrgb&fit=max&h=700&w=1600') no-repeat center center;
+      background: url('https://images.pexels.com/photos/399161/pexels-photo-399161.jpeg?auto=compress&cs=tinysrgb&h=750') no-repeat center center;
       background-size: cover;
       color: white;
       text-align: center;
       padding: 100px 20px;
     }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-    .section {
-      padding: 60px 20px;
-    }
-    .service-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <h1>Blueprint Strategy Execution Corporation</h1>
-    <p>From Blueprint to Reality for Contractors Nationwide</p>
-    <a href="#contact" class="btn btn-primary mt-3">Get Your Free Audit</a>
-  </section>
-
-  <section class="section text-center">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <h2>About Us</h2>
-      <p class="lead">
-        At Blueprint Strategy Execution Corporation, we help general contractors nationwide grow their businesses with modern digital marketing. We build strategies—and execute them—to deliver real results. Whether you’re a remodeler, commercial contractor, or home builder, we help you win more high-value projects.
-      </p>
-    </div>
-  </section>
-
-  <section class="section bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5">Our Services</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card service-card">
-            <img src="https://images.unsplash.com/photo-1581090700227-5f30a9d57c8f?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=400" class="card-img-top" alt="Website Design">
-            <div class="card-body">
-              <h5 class="card-title">Website Design</h5>
-              <p class="card-text">Modern, mobile-friendly websites that build trust and bring in leads.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card service-card">
-            <img src="https://images.unsplash.com/photo-1581091870623-7c39e32e8d3c?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=400" class="card-img-top" alt="SEO">
-            <div class="card-body">
-              <h5 class="card-title">Local SEO</h5>
-              <p class="card-text">Rank higher on Google and dominate searches like “kitchen remodeler near me.”</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card service-card">
-            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=400" class="card-img-top" alt="Reputation Management">
-            <div class="card-body">
-              <h5 class="card-title">Reputation Management</h5>
-              <p class="card-text">Get more 5-star reviews and build trust with homeowners and businesses.</p>
-            </div>
-          </div>
-        </div>
+      <a class="navbar-brand" href="index.html">Blueprint Strategy Execution Corporation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-we-work.html">How We Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <section id="contact" class="section">
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>From Blueprint to Reality</h1>
+    <p class="lead">Helping Contractors Nationwide Win More High-Value Jobs</p>
+    <a href="contact.html" class="btn btn-light mt-3">Get Your Free Audit</a>
+  </div>
+
+  <section class="py-5">
     <div class="container text-center">
-      <h2>Contact Us</h2>
-      <p class="lead">Ready to take your contracting business to the next level? Let’s talk!</p>
-      <p>Email us at: <a href="mailto:info@blueprintexecution.com">info@blueprintexecution.com</a></p>
-      <p>Or call us at: (555) 555-5555</p>
-      <a href="https://calendly.com" class="btn btn-primary mt-3" target="_blank">Schedule a Call</a>
+      <h2>Welcome to Blueprint Strategy Execution Corporation</h2>
+      <p>We help contractors nationwide grow revenue with modern digital marketing that doesn’t just plan—but executes for results.</p>
+      <img src="https://images.pexels.com/photos/209274/pexels-photo-209274.jpeg?auto=compress&cs=tinysrgb&h=350" class="img-fluid rounded mt-3" alt="About Us">
     </div>
   </section>
-
-  <footer>
-    &copy; 2025 Blueprint Strategy Execution Corporation. All Rights Reserved.
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
